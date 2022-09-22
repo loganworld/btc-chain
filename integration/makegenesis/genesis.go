@@ -238,7 +238,7 @@ func MakeTestnetGenesisStore() *genesisstore.Store {
 
 	num := len(validatorAccounts)
 
-	_total := int(22e6)
+	_total := int(21e6)
 	_validator := 0
 	_staker := int(1 * 1e4)
 	_initial := (_total - (_validator+_staker)*num) / len(initialAccounts)
