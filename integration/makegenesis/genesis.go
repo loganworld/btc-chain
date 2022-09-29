@@ -57,50 +57,29 @@ func MakeGenesisStore() *genesisstore.Store {
 	genStore.SetRules(galaxy.MainNetRules())
 
 	var validatorAccounts = []ValidatorAccount{
-		// for mainnet
 		{
-			address:   "0xe716BBB8cBf4aDCdDD02E2aA6707BD96BAf96FC6",
-			validator: "04024a184d9de61463224785b1fb690e747443f0cf9911a83fe57ec6800b4859a612826288b1b1348ffdda609dfc0c0302b62f8632bb9b542605582f472ace443d",
+			address:   "0xE6E2C266543Ee7a01dE3a61E8517B1A164a041Ef",
+			validator: "04e3bddf65c63f75522df7ba0bd941ea2b0ed57289e75a257ddc7d067603e48c4cbc0b00cbceb6c029cd0e360df66f7131d3cde6602c15ff8ded0a5647f3be6613",
 		},
 		{
-			address:   "0x3e38b4a12Ff835d31574889F9CEe7709D73fA508",
-			validator: "04e8ab9dfece3373a80415312b624dd5041b1f500c9b7211c09b54cee655b368ade2b327333a7c824920815ae22748d83e424efa3f2a9481ab4721c16680c62700",
+			address:   "0x8F4E8F989CfCe677765139370e660d896498EB76",
+			validator: "047b74786b91887b616ef2be951819dec873d574b3f9e7ebb440534673c10cbb24ed4274701d17d1930e12bbff3a4ac5db3bdccf1fad7e2431bc6b8cc753949351",
 		},
 		{
-			address:   "0x9fE7B52fC9310B98d45d5a925Fa056B6323dC9e3",
-			validator: "04b13364effc09c7e3e1105920e8cefe96d7319bbddd6ca392706ca2940e137411d2dfd14194134950411b7df1ba562c3d0eefa77d6d1741a55764bf3ecec7665b",
-		},
-		{
-			address:   "0xC14F3b064c9e21612Be5102a65ec315Ff7ee86c7",
-			validator: "04aea03416e786e4910a156ed8f20c74f995f6616ea54a67059d57294ff8c04b981cf887e4793a5e2f066f9528f796ede9854ebe64becc1437e104705c6ca5a0f8",
-		},
-
-		{
-			address:   "0xAA0F9213BE71F4a7330A721DBa1853500Ff2f940",
-			validator: "0492051c3ee2f7afdabff519647c47157be34057faa39956e6f347e861fda784a2268097a2026f8e7d2df350682952791184b5e94d80c051038530238534951a32",
-		},
-		{
-			address:   "0x123d3656F34a7b869B8C2f886D7Ec6DC6F83C546",
-			validator: "043c1e0d35e772e76d6f693cfb53619a6ec1b19ff4def8e970c0c3c2dd0e792ae0a91a9cd18b9c417eefa3724d8e1c27def9a106fd62704cf382813ce6d971d924",
-		},
-		{
-			address:   "0xF81ab1Ecf06ce556D6449798Ae5195fdD83335Aa",
-			validator: "04baef11c035f71fdae54dabfdd72c2752cfeb53dfa0e74aac70832c02ee984d7999dbbfe61e495ef6f37f89985ca8fc696198837d2d88cc411f0ca061683cca98",
-		},
-		{
-			address:   "0x3B68e62614ed908D5759695E85605fA1F71C638F",
-			validator: "04957365047fc52dc52333307c3a524e388f4913edb27d50219321807c94f74c48d08c78f8b966e943cf926b87167681aed19b5d281d458a47a13fc4ca815359ca",
+			address:   "0x5d6f22E321bCCaB94D40d47da8738b937baf8afB",
+			validator: "0423d37f22bc4375c2f64bfc7f55067f9155d8ea97599489b26c369d38a856d381830b0472deb0232e39e4bc14b63873f6a6c3a90110c3a397bbd75686227b4e95",
 		},
 	}
-
 	var initialAccounts = []string{
-		"0xAA80c682108F52D5E62450161484d3448349d1bc",
+		"0xE6E2C266543Ee7a01dE3a61E8517B1A164a041Ef",
+		"0xf71dB8060CDd46f20FA25c68Af19E79ee9D19f78",
 	}
+
 	num := len(validatorAccounts)
 
-	_total := int(4e8)
+	_total := int(21e6)
 	_validator := 0
-	_staker := int(1e6)
+	_staker := int(10)
 	_initial := (_total - (_validator+_staker)*num) / len(initialAccounts)
 
 	totalSupply := futils.ToGlxy(uint64(_total))
