@@ -71,7 +71,6 @@ func MakeGenesisStore() *genesisstore.Store {
 		},
 	}
 	var initialAccounts = []string{
-		"0xE6E2C266543Ee7a01dE3a61E8517B1A164a041Ef",
 		"0xf71dB8060CDd46f20FA25c68Af19E79ee9D19f78",
 	}
 
